@@ -95,13 +95,21 @@ Weather condition
 ## 📂 Project Structure
 
 bash
+
 Copy
+
 Edit
+
 weather-app/
+
 ├── index.html        # Main HTML file
+
 ├── style.css         # Styles for the app
+
 ├── app.js            # JavaScript logic & API calls
+
 └── README.md         # Project documentation
+
 ---
 
 ## 🚀 Future Improvements
