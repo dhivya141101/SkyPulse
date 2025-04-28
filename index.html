@@ -3,42 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trendy Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Trendy Calculator</title> <!-- Title for your webpage tab -->
+  <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file -->
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Trendy Calculator</h1>
-    <div class="calculator">
-      <input type="text" id="display" readonly />
-      <div class="buttons">
-        <button class="op" onclick="clearDisplay()">AC</button>
-        <button class="op" onclick="appendValue('(')"> ( </button>
-        <button class="op" onclick="appendValue(')')"> ) </button>
-        <button class="op" onclick="appendValue('/')">÷</button>
 
+  <!-- Main container to center everything -->
+  <div class="container">
+    <h1 class="title">Trendy Calculator</h1> <!-- App Title -->
+
+    <!-- Calculator box -->
+    <div class="calculator">
+      <input type="text" id="display" readonly /> <!-- Display screen, readonly to prevent manual typing -->
+
+      <!-- Button grid starts here -->
+      <div class="buttons">
+
+        <!-- Top functional buttons -->
+        <button class="op" onclick="clearDisplay()">AC</button> <!-- Clear all -->
+        <button class="op" onclick="appendValue('(')"> ( </button> <!-- Open parenthesis -->
+        <button class="op" onclick="appendValue(')')"> ) </button> <!-- Close parenthesis -->
+        <button class="op" onclick="appendValue('/')">÷</button> <!-- Divide -->
+
+        <!-- Number buttons and operators -->
         <button onclick="appendValue('7')">7</button>
         <button onclick="appendValue('8')">8</button>
         <button onclick="appendValue('9')">9</button>
-        <button class="op" onclick="appendValue('*')">×</button>
+        <button class="op" onclick="appendValue('*')">×</button> <!-- Multiply -->
 
         <button onclick="appendValue('4')">4</button>
         <button onclick="appendValue('5')">5</button>
         <button onclick="appendValue('6')">6</button>
-        <button class="op" onclick="appendValue('-')">−</button>
+        <button class="op" onclick="appendValue('-')">−</button> <!-- Subtract -->
 
         <button onclick="appendValue('1')">1</button>
         <button onclick="appendValue('2')">2</button>
         <button onclick="appendValue('3')">3</button>
-        <button class="op" onclick="appendValue('+')">+</button>
+        <button class="op" onclick="appendValue('+')">+</button> <!-- Add -->
 
-        <button class="zero" onclick="appendValue('0')">0</button>
-        <button onclick="appendValue('.')">.</button>
-        <button class="eq" onclick="calculateResult()">=</button>
-      </div>
-    </div>
-  </div>
+        <!-- Bottom row with bigger zero button -->
+        <button class="zero" onclick="appendValue('0')">0</button> <!-- Zero -->
+        <button onclick="appendValue('.')">.</button> <!-- Decimal point -->
+        <button class="eq" onclick="calculateResult()">=</button> <!-- Equal to calculate -->
 
+      </div> <!-- End of buttons -->
+    </div> <!-- End of calculator -->
+  </div> <!-- End of container -->
+
+  <!-- JavaScript link -->
   <script src="script.js"></script>
 </body>
 </html>

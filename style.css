@@ -1,65 +1,74 @@
+/* Importing 'Outfit' font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
+/* Resetting default margin, padding and setting box-sizing for consistency */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Styling the body to center everything and add background */
 body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  display: flex;
+  min-height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dark gradient background */
+  display: flex; /* Flexbox for easy centering */
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-family: 'Outfit', sans-serif;
+  flex-direction: column; /* Stack items vertically */
+  font-family: 'Outfit', sans-serif; /* Custom font */
   padding: 20px;
 }
 
+/* Container for the calculator and title */
 .container {
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* Limit max width */
   text-align: center;
 }
 
+/* Title styling */
 .title {
   font-size: 2.5rem;
-  color: #f078b4;
+  color: #f078b4; /* Pinkish color */
   margin-bottom: 30px;
-  text-shadow: 0 0 10px #6ce286, 0 0 20px #00ffe0;
+  text-shadow: 0 0 10px #6ce286, 0 0 20px #00ffe0; /* Neon glowing effect */
 }
 
+/* Calculator box styling */
 .calculator {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
   backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 30px 25px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4); /* Deep shadow for 3D feel */
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+/* Display screen */
 #display {
   width: 100%;
   height: 70px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 32px;
-  color: #ffffff;
-  text-align: right;
+  color: #ffffff; /* Text color */
+  text-align: right; /* Numbers align to the right */
   padding: 10px;
   margin-bottom: 20px;
-  outline: none;
+  outline: none; /* Removes border on click */
   border-radius: 5px;
 }
 
+/* Buttons grid */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  gap: 15px; /* Space between buttons */
 }
 
+/* General button styling */
 button {
   height: 70px;
   background: rgba(255, 255, 255, 0.08);
@@ -69,47 +78,63 @@ button {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.25s ease; /* Smooth hover animations */
 }
 
+/* Button hover effects */
 button:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-4px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px); /* Button lifts up a bit */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Adds nice shadow */
 }
 
+/* Special styling for operator buttons (+, -, *, /, etc.) */
 .op {
   background: rgba(255, 255, 255, 0.15);
-  color: #00ffe0;
+  color: #00ffe0; /* Neon blue text */
 }
 
+/* Styling for the equals button */
 .eq {
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Gradient background */
   color: #fff;
   font-size: 26px;
 }
 
+/* Make '0' button span two columns */
 .zero {
   grid-column: span 2;
 }
 
-/* RESPONSIVE */
+/* Other CSS styles remain the same */
+
+/* Button active (clicked) glow effect */
+button:active {
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6); /* Glowing effect */
+  transform: translateY(2px); /* Button sinks down a little */
+}
+
+/* Rest of the CSS stays the same */
+
+
+/* RESPONSIVE DESIGN for smaller screens */
 @media (max-width: 450px) {
   .title {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller title */
   }
 
   .calculator {
-    padding: 20px;
+    padding: 20px; /* Less padding */
   }
 
   #display {
-    font-size: 28px;
-    height: 50px;
+    font-size: 28px; /* Smaller display text */
+    height: 50px; /* Smaller display box */
   }
 
   button {
-    height: 40px;
-    font-size: 18px;
+    height: 40px; /* Smaller buttons */
+    font-size: 18px; /* Smaller text inside buttons */
   }
 }
